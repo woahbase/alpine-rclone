@@ -8,9 +8,10 @@ env:
   matrix:
   - ARCH=x86_64 PUID=1000 PGID=1000
   - ARCH=armhf PUID=1001 PGID=1001
-  global:
-install: true
+  - ARCH=armv7l  PUID=1001 PGID=1001
+  - ARCH=aarch64 PUID=1001 PGID=1001
 before_script:
+- uname -a
 - docker --version
 - make --version
 script:
