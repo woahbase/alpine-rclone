@@ -13,7 +13,7 @@ RUN set -xe \
     && curl -o /tmp/rclone.zip -SL https://github.com/ncw/rclone/releases/download/v${VERSION}/rclone-v${VERSION}-linux-arm64.zip \
     && cd /tmp/ \
     && unzip /tmp/rclone.zip \
-    && mv /tmp/rclone-*-linux-arm/rclone /usr/local/bin/ \
+    && mv /tmp/rclone-*-linux-arm64/rclone /usr/local/bin/ \
     && rm -rf /var/cache/apk/* /tmp/*
 #
 # VOLUME /home/alpine/project
