@@ -228,7 +228,7 @@ Maintained by [WOAHBase][204].
 [134]: https://github.com/just-containers/s6-overlay
 [135]: https://rclone.org/
 [137]: https://rclone.org/docs/
-[138]: https://github.com/ncw/rclone/releases
+[138]: https://github.com/rclone/rclone/releases
 
 [201]: https://github.com/woahbase
 [202]: https://travis-ci.org/woahbase/

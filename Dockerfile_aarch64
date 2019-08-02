@@ -9,8 +9,8 @@ RUN set -xe \
     && addgroup -g ${PGID} -S alpine \
     && adduser -u ${PUID} -G alpine -h /home/alpine -D alpine \
     && apk add --no-cache --purge -uU curl fuse tzdata wget zip unzip \
-    && VERSION="$(curl -sX GET "https://api.github.com/repos/ncw/rclone/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]' | sed -e 's_^v__')" \
-    && curl -o /tmp/rclone.zip -SL https://github.com/ncw/rclone/releases/download/v${VERSION}/rclone-v${VERSION}-linux-arm64.zip \
+    && VERSION="$(curl -sX GET "https://api.github.com/repos/rclone/rclone/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]' | sed -e 's_^v__')" \
+    && curl -o /tmp/rclone.zip -SL https://github.com/rclone/rclone/releases/download/v${VERSION}/rclone-v${VERSION}-linux-arm64.zip \
     && cd /tmp/ \
     && unzip /tmp/rclone.zip \
     && mv /tmp/rclone-*-linux-arm64/rclone /usr/local/bin/ \
